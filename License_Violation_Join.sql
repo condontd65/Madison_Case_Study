@@ -15,4 +15,4 @@ SELECT DISTINCT bi.case_no AS case_number, /*Selecting just distinct case_no to 
     ON bi.address ILIKE co.address /*using ILIKE from postgresql to ignore case in join*/
  WHERE bi.status = 'Violation' 
    AND EXTRACT(year from CAST(bi.case_date AS date)) = '2018' /*Not necessary, but would be useful with full dataset*/
-   ORDER BY bi.case_date DESC;
+ ORDER BY bi.case_date DESC;
